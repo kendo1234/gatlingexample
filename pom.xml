@@ -38,9 +38,27 @@
                 <groupId>io.gatling</groupId>
                 <artifactId>gatling-maven-plugin</artifactId>
                 <version>${gatling-plugin.version}</version>
-                <configuration>
-                    <simulationClass>gatlingsimulations.HttpSimulation1</simulationClass>                </configuration>
             </plugin>
         </plugins>
     </build>
+    <profiles>
+        <profile>
+            <id>marketplace_perf_test</id>
+            <activation>
+                <activeByDefault>true</activeByDefault>
+            </activation>
+            <build>
+                <plugins>
+                    <plugin>
+                        <groupId>io.gatling</groupId>
+                        <artifactId>gatling-maven-plugin</artifactId>
+                        <configuration>
+                            <!-- Uncomment to enable graphite integration to be able to watch tests live in Grafana -->
+                            <configFolder>src/test/resources/conf</configFolder>
+                        </configuration>
+                    </plugin>
+                </plugins>
+            </build>
+        </profile>
+    </profiles>
 </project>
