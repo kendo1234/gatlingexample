@@ -1,0 +1,5 @@
+gatlingsimulations.HttpSimulation2	httpsimulation2	RUN	1534448018593	 	2.0
+Scenario1	4995195023046230799-0	USER	START	1534448018616	0
+Scenario1	4995195023046230799-0	REQUEST		GET to base URL	1534448018634	1534448018634	1534448018634	1534448039653	KO	java.net.ConnectException: Connection timed out: no further information: computer-database.gatling.io/35.180.15.17:443
+Scenario1	4995195023046230799-0	REQUEST		GET to /computers	1534448042498	1534448042498	1534448042498	1534448063505	KO	java.net.ConnectException: Connection timed out: no further information: computer-database.gatling.io/35.180.15.17:443
+Scenario1	4995195023046230799-0	USER	END	1534448018616	1534448063509

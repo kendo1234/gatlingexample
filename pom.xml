@@ -43,7 +43,7 @@
     </build>
     <profiles>
         <profile>
-            <id>marketplace_perf_test</id>
+            <id>example_perf_test</id>
             <activation>
                 <activeByDefault>true</activeByDefault>
             </activation>
@@ -54,7 +54,7 @@
                         <artifactId>gatling-maven-plugin</artifactId>
                         <configuration>
                             <!-- Uncomment to enable graphite integration to be able to watch tests live in Grafana -->
-                            <configFolder>src/test/resources/conf</configFolder>
+                            <configFolder>src/test/resources/conf/</configFolder>
                         </configuration>
                     </plugin>
                 </plugins>
