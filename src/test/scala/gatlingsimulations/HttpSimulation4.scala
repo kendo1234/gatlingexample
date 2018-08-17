@@ -21,7 +21,7 @@ class HttpSimulation4 extends Simulation {
     println("***** Simulation 4 Begins *****")
 
     val theHttpProtocolBuilder = http
-      .baseURL("https://computer-database.gatling.io")
+      .baseURL("https://google.com")
 
     val theScenarioBuilder = scenario("Scenario1")
       .exec(
@@ -33,7 +33,7 @@ class HttpSimulation4 extends Simulation {
      * Increase the number of users that sends requests in the scenario Scenario1 to
      * ten users over a period of 20 seconds.
      */
-      theScenarioBuilder.inject(rampUsers(50).over(5 seconds))
+      theScenarioBuilder.inject(rampUsers(100).over(120 seconds))
     ).protocols(theHttpProtocolBuilder)
   }
 }

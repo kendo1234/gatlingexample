@@ -54,7 +54,7 @@
                         <artifactId>gatling-maven-plugin</artifactId>
                         <configuration>
                             <!-- Uncomment to enable graphite integration to be able to watch tests live in Grafana -->
-                            <configFolder>src/test/resources/conf/</configFolder>
+                            <configFolder>src/test/scala/resources/</configFolder>
                         </configuration>
                     </plugin>
                 </plugins>
