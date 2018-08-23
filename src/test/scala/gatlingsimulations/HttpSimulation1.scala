@@ -2,8 +2,7 @@ package gatlingsimulations
 
 import io.gatling.core.Predef._
 import io.gatling.http.Predef._
-import io.gatling.http.config.HttpProtocolBuilder.toHttpProtocol
-import io.gatling.http.request.builder.HttpRequestBuilder.toActionBuilder
+
 
 /**
   * Example Gatling load test that sends two HTTP requests to the same URL.
@@ -30,8 +29,9 @@ class HttpSimulation1 extends Simulation {
       .exec(
         /* myRequest1 is a name that describes the request. */
         http("myRequest1")
-          .get("/")
-      )
+          .get("/"))
+          .pause(5)
+
 
     /*
  * Define the load simulation.
