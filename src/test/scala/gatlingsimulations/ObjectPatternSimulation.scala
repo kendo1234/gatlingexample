@@ -4,7 +4,8 @@ import io.gatling.core.Predef._
 import io.gatling.http.Predef._
 import io.gatling.http.request.builder.HttpRequestBuilder.toActionBuilder
 
-class ObjectPatternSimulation extends Simulation {
+class ObjectPatternSimulation extends Simulation
+{
 
 
   //define set values in objects, to then pass into scenarios

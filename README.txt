@@ -26,7 +26,7 @@ ADD influxdb.conf /etc/influxdb/influxdb.conf
 
 **********************************************************************************************************
 
-Example simulation run - mvn gatling:execute -Dgatling.simulationClass=gatlingsimulations.HttpSimulation2
+Example simulation run - mvn gatling:execute -Dgatling.simulationClass=gatlingsimulations.HttpSimulation1
 
 Grafana Setup:
 
