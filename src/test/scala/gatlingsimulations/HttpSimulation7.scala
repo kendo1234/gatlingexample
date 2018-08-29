@@ -1,7 +1,6 @@
 package gatlingsimulations
 
 import io.gatling.core.Predef._
-import io.gatling.core.body.Body
 import io.gatling.http.Predef._
 import io.gatling.http.request.Body
 
