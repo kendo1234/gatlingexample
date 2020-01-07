@@ -1,6 +1,4 @@
-################################
 # Gatling Example Requirements #
-################################
 
 ### Example Simulation Run ###
 
