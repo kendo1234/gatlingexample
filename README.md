@@ -2,10 +2,12 @@
 # Gatling Example Requirements #
 ################################
 
+### Example Simulation Run ###
 
-influxdb config and dockerfile example:
+mvn gatling:execute -Dgatling.simulationClass=gatlingsimulations.HttpSimulation1
 
-***********************************************************************************************************
+### influxdb config and dockerfile example: ###
+
 [meta]
   dir = "/var/lib/influxdb/meta"
 [data]
@@ -19,23 +21,21 @@ influxdb config and dockerfile example:
                 "gatling.*.*.*.* measurement.simulation.request.status.field",
                 "gatling.*.users.*.* measurement.simulation.measurement.request.field"
         ]
-**********************************************************************************************************
+
 
 FROM influxdb
 ADD influxdb.conf /etc/influxdb/influxdb.conf
 
-**********************************************************************************************************
 
-Example simulation run - mvn gatling:execute -Dgatling.simulationClass=gatlingsimulations.HttpSimulation1
 
-Grafana Setup:
+### Grafana Setup: ###
 
 docker build -t influxdb-example .
 docker run -d -p 8086:8086 -p 2003:2003 influxdb-example -config /etc/influxdb/influxdb.conf
 docker run -d --name=grafana -p 3000:3000 grafana/grafana
 
 
-Inspect influxdb:
+### Inspect influxdb: ###
 
 - Attach terminal to container - docker exec -i -t *CONTAINER ID* /bin/bash
 - type 'influx' in terminal
